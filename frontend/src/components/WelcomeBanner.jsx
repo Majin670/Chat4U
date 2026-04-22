@@ -42,7 +42,7 @@ const WelcomeBanner = () => {
       <div className="text-sm">
         <div className="font-semibold mb-1">Hi @{username}, welcome to Chat4U!</div>
         <div>
-          Thank you for choosing Chat4U. This website is currently in beta testing — enjoy chatting with your friends and family. We’d love your feedback on what more we can add: <span className="font-medium">@ayushkrsna01@gmail.com</span>.
+          Thank you for choosing Chat4U. This website is currently in beta testing — enjoy chatting with your friends and family. We’d love your feedback on what more we can add: <span className="font-medium">manittomar2611@gmail.com</span>.
         </div>
       </div>
       <button className="btn btn-ghost btn-xs" onClick={handleDismiss} title="Dismiss">Dismiss</button>
