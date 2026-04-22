@@ -9,9 +9,26 @@ import { logger } from "./logger.js";
 const app = express();
 const server = http.createServer(app);
 
+const DEV_ORIGINS = [
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "http://localhost:5175",
+  "http://127.0.0.1:5173",
+  "http://127.0.0.1:5174",
+  "http://127.0.0.1:5175",
+];
+
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+      const CLIENT_URL = process.env.CLIENT_URL;
+      if (DEV_ORIGINS.includes(origin) || (CLIENT_URL && origin === CLIENT_URL)) {
+        return callback(null, true);
+      }
+      return callback(new Error("Not allowed by CORS"));
+    },
+    credentials: true,
   },
 });
 

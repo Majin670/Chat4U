@@ -8,8 +8,8 @@ export const generateToken = (userId, res) => {
   res.cookie("jwt", token, {
     maxAge: 7 * 24 * 60 * 60 * 1000, // MS
     httpOnly: true,
-    // Use lax in development so cookies are sent to API on a different port
-    sameSite: process.env.NODE_ENV === "development" ? "lax" : "strict",
+    // Use none in production for cross-site cookies between Vercel and Railway
+    sameSite: process.env.NODE_ENV === "development" ? "lax" : "none",
     secure: process.env.NODE_ENV !== "development",
   });
 

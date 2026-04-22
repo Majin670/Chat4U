@@ -68,12 +68,12 @@ export default function NotificationsBell() {
                   <>
                     Hi @{authUser.username}, welcome to Chat4U! Thank you for choosing Chat4U.
                     This website is currently in beta — enjoy chatting with your friends and family.
-                    We’d love your feedback: ayushkrsna01@gmail.com
+                    We’d love your feedback: manittomar2611@gmail.com
                   </>
                 ) : (
                   <>
                     Welcome to Chat4U! This website is currently in beta — enjoy chatting.
-                    We’d love your feedback: ayushkrsna01@gmail.com
+                    We’d love your feedback: manittomar2611@gmail.com
                   </>
                 )}
               </div>

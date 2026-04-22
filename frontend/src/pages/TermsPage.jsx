@@ -176,7 +176,7 @@ const TermsPage = () => {
             <h2 className="text-lg font-semibold">14. Contact & Grievance Officer</h2>
             <p className="text-base-content/70">
               Grievance Officer: <span className="font-medium">Founder</span> —
-              <span className="font-medium"> ayushkrsna01@gmail.com</span>
+              <span className="font-medium"> manittomar2611@gmail.com</span>
             </p>
             <p className="text-base-content/70">
               For complaints or rights requests (access, correction, deletion), email us. We aim to

@@ -1,8 +1,7 @@
 {
-  "routes": [
-    { "src": "/api/(.*)", "dest": "https://chat4u-chat-website.onrender.com/api/$1" },
-    { "src": "/socket.io/(.*)", "dest": "https://chat4u-chat-website.onrender.com/socket.io/$1" },
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "https://chat4u.onrender.com/api/$1" },
+    { "source": "/socket.io/(.*)", "destination": "https://chat4u.onrender.com/socket.io/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
